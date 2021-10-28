@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skipper</title>
+</head>
+
+<body>
+
+<script>
+    function test(){
+        $.ajax({url:"./main.php", success:function(result){
+                $("div").text(result);}
+        })
+    }
+</script>
+
+<button type="button" onclick="test()">giz a click</button>
+<div></div>
+
+
+</body>
+
+</html>
