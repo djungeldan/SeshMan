@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+   body {
+       background-color: #32393F
+   }
+   input {
+       font-family: "Comic Sans MS",sans-serif;
+       font-size: clamp(1rem, -0.875rem + 8.333333vw, 3.5rem) ;
+       color: lawngreen;
+       margin: 0;
+       position: absolute;
+       top: 50%;
+       -ms-transform: translateY(-50%);
+       transform: translateY(-50%);
+   }
 
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Skipper</title>
 </head>
 
 <body>
-
-<script>
-    function test(){
-        $.ajax({url:"./main.php", success:function(result){
-                $("div").text(result);}
-        })
-    }
-</script>
-
-<button type="button" onclick="test()">giz a click</button>
+<form action="./main.php">
+    <input type="submit" value="THIS BUTTON SKIPS SONGS">
+</form>
 <div></div>
 
 

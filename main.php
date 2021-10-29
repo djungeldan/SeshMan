@@ -1,7 +1,27 @@
 <?php
 //Main script that calls the python file
-//system('python3 skip.py');
+function skipSong(){
+    system('python ./Skip.py');
+}
+function Redirect($url, $permanent = false)
+{
+    if (headers_sent() === false)
+    {
+        header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+    }
 
-//just to test that this actually works
+    exit();
+}
+function readCounter(){
+    $filename = "./counter.txt";
 
-echo"<b>The button can call me! -PHP</b>";
+    $handler = fopen($filename,'r');
+
+    $contents = fread($handler, filesize($filename));
+
+    return $contents;
+}
+skipSong();
+Redirect("/SeshMan");
+
+
